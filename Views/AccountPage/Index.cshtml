@@ -1,0 +1,12 @@
+﻿@model PageViewModel<AccountPage>
+
+@{
+    ViewData["Title"] = "Account Page";
+}
+
+<h2>@Model.CurrentPage.PageTypeName</h2>
+
+<form asp-action="Login" method="post">
+    <button type="submit" name="provider" value="Saml2Instance1">Login with SAML1</button>
+    <button type="submit" name="provider" value="Saml2Instance2">Login with SAML2</button>
+</form>
